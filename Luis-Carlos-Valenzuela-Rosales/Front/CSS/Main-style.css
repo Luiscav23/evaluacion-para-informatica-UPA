@@ -1,0 +1,24 @@
+
+*{
+  font-weight: 300;
+  font-size: medium;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.container-box{
+  padding: 100px;
+}
+
+.titulo{
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.Barra-nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(127, 249, 127);
+  height: 50px;
+}
