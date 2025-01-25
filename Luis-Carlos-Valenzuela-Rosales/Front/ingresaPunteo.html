@@ -44,11 +44,24 @@
         function limitePunteo() {
             let Punteo = document.getElementById('punteo_usuario').value;
             if (Punteo >= 1 && Punteo <= 100) {
-                console.log("punteo en el rango determinado");
+                alert("punteo en el rango determinado");
                 
             }else{
                 alert("Dato ingresado en punteo fuera de rango, ingrese un valor entre 1 y 100");
-                
+            }
+        }
+
+        function ValidarCorreo() {
+            let Correo = document.getElementById('correo').value;
+
+            let validaEmail = "/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/";
+
+            if (validaEmail.test(Correo.Value)) {
+                alert("Correo Valido");
+                return true;
+            }else{
+                alert("Formato incorrecto, ingrese un correo valido");
+                return false;
             }
         }
     </script>
@@ -59,7 +72,7 @@
     <form action="/punteo_usuario" method="post">
         <h2>Formulario de punteo del usuario</h2>
         <label for="correo">Correo a ingresar:</label>
-        <input type="text" id="nombre" name="correo" required>
+        <input type="text" id="nombre" name="correo" onclick="ValidarCorreo()">
         
         <label for="punteo_usuario">Punteo del usuario:</label>
         <input type="text" id="punteo_usuario" name="punteo_usuario" oninput="limitePunteo()">
