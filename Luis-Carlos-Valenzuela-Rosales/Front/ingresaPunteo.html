@@ -40,6 +40,18 @@
             cursor: pointer;
         }
     </style>
+    <script>
+        function limitePunteo() {
+            let Punteo = document.getElementById('punteo_usuario').value;
+            if (Punteo >= 1 && Punteo <= 100) {
+                console.log("punteo en el rango determinado");
+                
+            }else{
+                alert("Dato ingresado en punteo fuera de rango, ingrese un valor entre 1 y 100");
+                
+            }
+        }
+    </script>
 
 </head>
 <body>
@@ -50,7 +62,7 @@
         <input type="text" id="nombre" name="correo" required>
         
         <label for="punteo_usuario">Punteo del usuario:</label>
-        <input type="text" id="punteo_usuario" name="punteo_usuario">
+        <input type="text" id="punteo_usuario" name="punteo_usuario" oninput="limitePunteo()">
         
         <button type="submit" value="enviar formulario">Enviar</button>
     </form>
